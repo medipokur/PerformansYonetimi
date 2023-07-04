@@ -1,0 +1,15 @@
+USE [Work]
+GO
+
+CREATE TABLE [dbo].[SprintAssignment](
+	[SprintNo] [int] NOT NULL,
+	[TalepNo] [varchar](15) NULL,
+	[BTTaskNo] [varchar](15) NULL,
+	[TalepAdi] [varchar](150) NULL,
+	[Assignee] [varchar](50) NULL,
+	[TaskStatu] [varchar](20) NULL,
+	[TaskType] [varchar](10) NULL,
+	[Note] [varchar](500) NULL,
+	[Puan] [int] NULL
+) ON [PRIMARY]
+GO
