@@ -1,0 +1,40 @@
+USE [Work]
+GO
+
+ALTER PROC [dbo].[ins_SprintAssignment]
+@SprintNo	int,
+@TalepNo	varchar(15),
+@BTTaskNo	varchar(15),
+@TalepAdi	varchar(150),
+@Assignee varchar(50),
+@TaskStatu	varchar(20),
+@TaskType	varchar(10),
+@Note		varchar(500),
+@Puan		int = null
+AS
+BEGIN
+SET NOCOUNT ON
+
+INSERT INTO [dbo].[SprintAssignment]
+           ([SprintNo]
+           ,[TalepNo]
+           ,[BTTaskNo]
+           ,[TalepAdi]
+           ,[Assignee]
+           ,[TaskStatu]
+           ,[TaskType]
+           ,[Note]
+           ,[Puan])
+     VALUES
+           (@SprintNo	,
+			@TalepNo	,
+			@BTTaskNo	,
+			@TalepAdi	,
+			@Assignee ,
+			@TaskStatu	,
+			@TaskType	,
+			@Note		,
+			@Puan	)	
+
+END
+
